@@ -1,0 +1,105 @@
+Instructor email- Akmal,  akmalyezdani512@gmail.com
+https://globalknowledge.zoom.us/w/97788584997?tk=d-cmY-m9T_UaPMRFXD_y-v734tk1W5PLxk79BF18D9o.DQMAAAAWxKdkJRY1ZF9wZktDSlFtYVFGTlcyLWpoUGdBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=TmRiamU5cEFGbjJJRitaZ05VSnp1QT09
+
+AWS Developer- https://www.twitch.tv/aws_namer_programs
+
+Questions:
+- What is RBAC and Policy, subscription, management grp
+
+Levels:
+Exam AZ-900 : MS Azure Fundamentals
+Microsoft Certified AZ-104 : Azure Administrator Associate
+Microsoft Certified AZ-305: Azure Solutions Architect Expert
+
+Structure of Course
+Day 1: Intro, Governance, Compute
+Day 2: Storage(non-relational), storage(relational), Data Integration
+Day 3: App Architecture, Authentication and Authorization, Monitoring
+Day 4: Networks, BCDR, Migrations
+
+Exam - based on study material
+https://mygk.globalknowledge.com/Content/Main/MyCourse.aspx
+
+Resources
+https://learn.microsoft.com/en-in/azure/architecture/framework/
+https://learn.microsoft.com/en-in/azure/cloud-adoption-framework/
+https://learn.microsoft.com/en-in/azure/architecture/framework/
+
+***Design a governance solution (Create hirarchical structure for organization)
+- Provides mechanisms and processes to maintain control over your applications and resources in Azure
+- Determine your requirements, plan your initiatives and set strategic priorities
+- Plan for governance at every level: management groups, subscriptions, resource groups, resources
+- Tenant root group => management groups(RBAC, Policy), subscriptions based on (geographical region), resource groups, resources (Dev, Prod, MySQL, VM, Website)
+
+***Design for management groups (R -> RG -> Sub -> mgmt)
+- A resource can only be created with a resource group
+- A Resource group can have subscription
+- A subscription will have management
+- RBAS - Role based access subscription => subs1 (RBAC + policy) + subs2 + subs3 => Management grp => RBAC & Policy
+
+6 layers management grp => created based on org structure/dep needs, geographical structure, production mgmt, sandbox management grp)
+- 1. Tenant root grp => created automatically
+- 2. Tailwinds
+- 3. Sales, 4. corporate, 5.IT => 6. Production (App1, App2, App3), HR, Legal, R&D
+
+***Design for Azure subscriptions
+- Azure subscription are logical containers for management and billing
+- Consider billing + cost reporting
+- Consider centralized or decentralized model
+- Grp subscriptions together under management grps - apply common policies and role assignments
+- Consider subscription scale limits - specialized workloads, IoT, SAP
+- Consider a dedicated shared services subscription - common service 
+- Make subscription owners aware of their roles and responsibilities
+
+***Design for resource groups
+
+***Design for resource tagging (Meta data used for websites, TAGS are extremely important for FinOPS)
+- Identifying resources for later usage e.g resources which were dedicated for IT/HR/Sales etc
+
+***Desgin for Azure policy and RBAC (RBAC + Policies work together)
+- Policy = Helps enforce organizational standards and to assess compliance at-scale
+
+** Design for Role-based access control (RBAC)
+- Allows you to grant access to Azure resources that you control.
+- Only grant users the acces they need
+- Assign at the highest scope level that meets the requirements
+- Assign roles to groups, not users
+- Tageting roles to Reader, Resource-specific, Custom, Contributor, Owner
+
+**Design for Azure Blueprints (Changes should be made in the bluseprint) artifact -> config -> subsc -> ARM -> Resource
+- Make changes in the artifact
+- Use blueprints at once
+- Blueprints lets you define a repeatable set of governance tools and standard Azure resources that your organization requires.
+- Compose (ARM templates, RG, role-based, policy definitions) -> Manage (Blueprints definition/assignment) -> Scale (SubA, SubB, SubC)
+
+Bicep - code extension
+
+Case Studies => https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/ 
+https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/
+
+
+Root Management Group -> Tallwinds MG -> Apparel (Subs) -> Product development + marketing + sales
+Sporting Goods(sales) -> Product Development RG + marketing + sales
+
+Alt 2: Root management group -> Tailwinds MG -> Apparel MG + Sporting 
+Apparel (Product develop subs, marketing,sales)
+Sporting good MG (Product development subs, marketing, sales)
+
+When to use Azure Container Instances
+- Azure Container Inatnces are a fast and simple way to run a container on Azure.
+Pros: fast and easy, used for testing & development
+
+Considerations for Azure Kubernetes services
+- Azure Kubernetes Service (AKS) orchestrates your containerized service
+
+***Design for Azure Functions (Serverless)
+- Azure func is serverless app platform for compute-on-demand
+- Implement your system's logic into readily available blocks of code
+- Supports a microservice design
+- Promotes code reuse
+-Scales easily
+- Event-driven
+
+
+
+
