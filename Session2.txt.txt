@@ -1,0 +1,41 @@
+Zoom:
+
+https://globalknowledge.zoom.us/w/97788584997?tk=d-cmY-m9T_UaPMRFXD_y-v734tk1W5PLxk79BF18D9o.DQMAAAAWxKdkJRY1ZF9wZktDSlFtYVFGTlcyLWpoUGdBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=TmRiamU5cEFGbjJJRitaZ05VSnp1QT09
+
+Dumps: DUMPSGATE's AZ-305 exam dumps
+
+AZ-104
+
+Topics:
+Compute
+Storage (non-relational)
+Storage (relational)
+Data Integration
+
+Case Study: Design a Compute Solution (PaaS solution)
+Instructor Solu => Internet -> Application GW -> App Services (Frontend) -> Function Apps (middle tier) -> SQL Database (Back-end tier)
+(IaaS)
+Internet -> LB -> VM Scale sets -> LB - VM scale sets -> LB - > SQL ->(active directory)  Cloud witness
+
+*** Design a non-relational data storage solution
+- Structured data includes relational data and has a shared schema (cosmosdb - texts, SQLdb)
+- Semi-structured is less organized than structured data and isn't in a relational format
+- Unstructured data is the least orga type of data(Blobs, Files). Three types of Blob storage (block, page, appended)
+
+*** Design for Azure storage accounts
+- Storage account is kind of security boundary
+
+Determine the best storage account type
+- Account Type = standard general-purpose v2, premium block blobs, premium file shares, page blobs
+- Supported service = Blobs/Data lake, queues, tables, azure files, Blob storage, Data lake, Azure files, page blobs 
+
+*** Design for data redundancy
+- Durability => 
+Select a storage replication strategy
+- Primary Region => Locally redundant storage, Zone redundant storage (ZRS)
+- Secondary Region => Geo-redundant storage, Geo-zone redundant storage (LRS)
+
+
+
+
+
